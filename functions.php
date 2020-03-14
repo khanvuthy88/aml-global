@@ -206,4 +206,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 function wpbeginner_remove_version() {
 	return '';
 }
-add_filter('the_generator', 'wpbeginner_remove_versi
+add_filter('the_generator', 'wpbeginner_remove_version');
