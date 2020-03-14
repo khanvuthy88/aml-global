@@ -9,6 +9,7 @@ import device from "current-device";
 
 var plugins = {
 	customLogoImage : $('img.custom-logo'),
+	homePageCoverImage : $('div.show_background_image'),
 	customFeatureImage : $('div.custom_feature_image_style'),
 	singlePageThumb: $('div.custom_feature_image_style .post-thumbnail img'),
 	navResponsive: $('#navbarCollapse'),
@@ -24,6 +25,10 @@ if(plugins.singlePageThumb.length){
 		plugins.singlePageThumb.css({'height':plugins.screenHeight + 'px', 'object-fit':'cover', 'width':'100%'});
 	}
 }
+// $(plugins.homePageCoverImage).css({
+// 	'height': plugins.screenHeight
+// });
+
 if(device.mobile()){
 	plugins.customLogoImage.css({'width': 'auto'});
 	plugins.navResponsive.css({

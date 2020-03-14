@@ -101,6 +101,60 @@ article{
     }
 }
 
+section{
+    &#home-page{
+        .overlay{
+            width: 100%; /* Full width (cover the whole page) */
+            height: 100%; /* Full height (cover the whole page) */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+            z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+        }
+        .content{
+            text-align: center;
+            margin: 7rem auto;
+            vertical-align: middle;
+            color: #fff;
+            @include media-breakpoint-up(xs){
+                margin: 3rem auto;
+            }
+            @include media-breakpoint-up(xs){
+                margin: 7rem auto;
+            }
+            // color: $aml-primary-color;
+            h1{
+                font-family: $font-family-segoe-ui-bold-sans-serif;
+                margin-bottom: 30px;
+            }
+            ul{
+                display: grid;
+                padding:0px;
+                margin: 0px;
+                margin-top: 30px;
+                @include media-breakpoint-up(xs){
+                    grid-template-columns: 47% 47%;
+                    grid-column-gap: 5.5%;
+                    grid-row-gap: 10px;
+                }
+                @include media-breakpoint-up(md){
+                    grid-template-columns: 20% 20% 20% 20% 20%;
+                    grid-column-gap: 10px;
+                    grid-row-gap: 10px;
+                }
+                li{
+                    list-style: none;
+                    font-family: $font-family-segoe-ui-bold-sans-serif;
+                    background-color: $aml-primary-color;
+                    padding: 7px 15px;
+                }
+            }
+        }
+    }
+}
+
 #content-gallery{
     @include media-breakpoint-up(md){
         display: grid;
