@@ -14,6 +14,8 @@ var plugins = {
 	navResponsive: $('#navbarCollapse'),
 	navResponsiveLi: $('#navbarCollapse ul li'),
 	navResponsiveAlink: $('#navbarCollapse ul li a'),
+	hasScopeOfSupply: $('ul#scope-of-supply'),
+	hasGlobalPartners: $('ul#sidebar-global-partners'),
 	screenHeight: $(window).height()
 }
 
@@ -35,5 +37,18 @@ if(device.mobile()){
 	plugins.navResponsiveAlink.css({
 		'color': '#fff',
 		'padding': '7px 15px'
+	});
+}
+if(plugins.hasScopeOfSupply.length){
+	plugins.hasScopeOfSupply.css({
+		'padding': '0px',
+		'margin': '0px'
+	});
+}
+if(plugins.hasGlobalPartners.length){
+	plugins.hasGlobalPartners.css({
+		'padding': '0px',
+		'margin': '0px',
+		'maring-top': '30px'
 	});
 }

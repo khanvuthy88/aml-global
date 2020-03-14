@@ -17,6 +17,21 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+		<?php if(is_page('scope-of-supply')): ?>
+			<?php if ( is_active_sidebar( 'sidebar-scope_of_supply' ) ) : ?>
+			    <ul id="scope-of-supply">
+			        <?php dynamic_sidebar( 'sidebar-scope_of_supply' ); ?>
+			    </ul>
+			<?php endif; ?>
+		<?php endif; ?>
+		<?php if(is_page('principals-and-partners')): ?>
+			<?php if ( is_active_sidebar( 'sidebar-global-partners' ) ) : ?>
+			    <ul id="sidebar-global-partners">
+			        <?php dynamic_sidebar( 'sidebar-global-partners' ); ?>
+			    </ul>
+			<?php endif; ?>
+		<?php endif; ?>
+		
 		<?php
 		the_content();
 
