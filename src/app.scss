@@ -1,0 +1,162 @@
+@import "_variables";
+@font-face {
+    font-family: 'Segoe UI-normal';
+    src: url('#{$aml_asset_path}/fonts/SegoeUI.woff2') format('woff2'),
+        url('#{$aml_asset_path}/fonts/SegoeUI.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+@font-face {
+    font-family: 'Segoe UI-italic';
+    src: url('#{$aml_asset_path}/fonts/SegoeUI-BoldItalic.woff2') format('woff2'),
+        url('#{$aml_asset_path}/fonts/SegoeUI-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Segoe UI-bold';
+    src: url('#{$aml_asset_path}/fonts/SegoeUI-Bold.woff2') format('woff2'),
+        url('#{$aml_asset_path}/fonts/SegoeUI-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+#mini-head{
+    background-color: $aml-primary-color;
+    color: #fff;
+    width: 100%;
+    padding: 10px 0;
+    h2{
+        display: none;
+    }
+    ul{
+        padding:0px;
+        margin: 0px;
+        li{
+            display: inline;
+            @include media-breakpoint-up(md){
+                margin-right: 15px;
+            }
+            &.tel{
+                &:before{
+                    font-family: 'FontAwesome';
+                    content: '\f098';
+                    position: relative;
+                    margin-right: 5px;
+                    font-size: 110%;
+                }
+            }
+            &.email{
+                &:before{
+                    font-family: 'FontAwesome';
+                    content: '\f003';
+                    position: relative;
+                    margin-right: 5px;
+                    font-size: 110%;
+                }
+            }
+        }
+    }
+    section{
+        float: left;
+    }
+}
+
+ul{
+    &#primary-menu{
+        li{
+            a{
+                &.nav-link{
+                    text-transform: uppercase;
+                    @include media-breakpoint-down(md){
+                        padding: 0px 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-down(xs){
+    img{
+        &.custom-logo{
+            width:auto;
+            height: auto;
+        }                
+    }
+}
+@include media-breakpoint-down(sm){
+    img{
+        &.custom-logo{
+            width:auto;
+            height: auto;
+        }                
+    }
+}
+@include media-breakpoint-down(md){
+    .navbar-brand{
+        img{
+            &.custom-logo{
+                width:216px;
+                height: auto;
+            }                
+        }
+    }
+}
+@include media-breakpoint-down(lg){
+    .navbar-brand{
+        img{
+            &.custom-logo{
+                width:216px;
+                height: auto;
+            }                
+        }
+    }
+}
+
+.nav-link{
+    &.active{
+        color: $aml-primary-color !important;
+    }
+}
+.site-footer{
+    background-color: $aml-secondary-color;
+    padding: 15px 0;
+    p{
+        margin-bottom: 0px !important;
+    }
+    .footer-brand-name{
+        h1{
+            color: #1579bd;
+            font-size: 28px;
+            font-family: $font-family-segoe-ui-bold-sans-serif;
+        }
+        @include media-breakpoint-down(xs){
+            margin-bottom: 15px;
+        }
+    }
+    .footer-brand-content{
+        p{
+            span{
+                &:first-child{
+                    color: $aml-primary-color;
+                    font-weight: bold;
+                }
+            }
+        }
+        
+    }
+}
+.custom_feature_image_style{
+    margin-bottom: 30px;
+}
+h1{
+    &.entry-title{
+        color: $aml-primary-color;
+        font-family: $font-family-segoe-ui-bold-sans-serif;
+    }
+}
