@@ -129,6 +129,32 @@ function aml_mini_head_widgets_init() {
 }
 add_action( 'widgets_init', 'aml_mini_head_widgets_init' );
 
+function aml_scope_of_supply_widgets_init() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Scope of Supply', 'aml-global' ),
+		'id'            => 'sidebar-scope_of_supply',
+		'description'   => esc_html__( 'Add widgets here.', 'aml-global' ),
+		'before_widget' => '<section id="%1$s" class="widget widget-scope-of-supply %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'aml_scope_of_supply_widgets_init' );
+
+function aml_global_partners_widgets_init() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Global Partners', 'aml-global' ),
+		'id'            => 'sidebar-global-partners',
+		'description'   => esc_html__( 'Add widgets here.', 'aml-global' ),
+		'before_widget' => '<section id="%1$s" class="widget widget-global-partners %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'aml_global_partners_widgets_init' );
+
 /**
  * Enqueue scripts and styles.
  */
@@ -168,10 +194,13 @@ require get_template_directory() . '/inc/customizer.php';
 
 require get_template_directory() . '/inc/bs4navwalker.php';
 
+require get_template_directory(). '/inc/custom-wp-gallery.php';
+
 /**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
 

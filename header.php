@@ -27,7 +27,7 @@
 	<div id='mini-head'>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-6 col-xs-12">
 					<?php dynamic_sidebar( 'sidebar-mini-head' ); ?>
 				</div>
 			</div>
@@ -35,41 +35,38 @@
 	</div>
 	
 	<header id="masthead" class="site-header">
-		<div class="container">
-			<div class="row">
-				
-				<div class="col-md-12 col-smg-12">
-
-					<nav class="navbar navbar-expand-md navbar-light">
-						<div class="site-branding navbar-brand">
-						<?php
-							the_custom_logo();
-							?>
-						</div><!-- .site-branding -->
-						<!-- <a class="navbar-brand" href="#">
-							<?php bloginfo('name'); ?>
-						</a> -->
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-						<?php
-							wp_nav_menu([
-								'menu'            => 'primary',
-								'theme_location'  => 'menu-1',
-								'container'       => 'div',
-								'container_id'    => 'navbarCollapse',
-								'container_class' => 'collapse navbar-collapse',
-								'menu_id'        => 'primary-menu',
-								'menu_class'      => 'navbar-nav ml-auto',
-								'depth'           => 0,
-								'fallback_cb'     => 'bs4navwalker::fallback',
-								'walker'          => new bs4navwalker()
-							]);
+		<nav class="navbar navbar-expand-md navbar-light">
+			<div class="container">
+				<div class="site-branding navbar-brand">
+					<?php
+						the_custom_logo();
 						?>
-					</nav>
+					</div><!-- .site-branding -->
+					<!-- <a class="navbar-brand" href="#">
+						<?php bloginfo('name'); ?>
+					</a> -->
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<?php
+						wp_nav_menu([
+							'menu'            => 'primary',
+							'theme_location'  => 'menu-1',
+							'container'       => 'div',
+							'container_id'    => 'navbarCollapse',
+							'container_class' => 'collapse navbar-collapse',
+							'menu_id'        => 'primary-menu',
+							'menu_class'      => 'navbar-nav ml-auto',
+							'depth'           => 0,
+							'fallback_cb'     => 'bs4navwalker::fallback',
+							'walker'          => new bs4navwalker()
+						]);
+					?>
 				</div>
 			</div>
-		</div>
+
+		</nav>
+		
 		
 	</header><!-- #masthead -->
 

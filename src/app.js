@@ -11,6 +11,9 @@ var plugins = {
 	customLogoImage : $('img.custom-logo'),
 	customFeatureImage : $('div.custom_feature_image_style'),
 	singlePageThumb: $('div.custom_feature_image_style .post-thumbnail img'),
+	navResponsive: $('#navbarCollapse'),
+	navResponsiveLi: $('#navbarCollapse ul li'),
+	navResponsiveAlink: $('#navbarCollapse ul li a'),
 	screenHeight: $(window).height()
 }
 
@@ -21,4 +24,16 @@ if(plugins.singlePageThumb.length){
 }
 if(device.mobile()){
 	plugins.customLogoImage.css({'width': 'auto'});
+	plugins.navResponsive.css({
+		'margin-right': '-15px',
+        'margin-left': '-15px',
+        'background-color': '#1579bd'
+	});
+	plugins.navResponsiveLi.css({
+		'border-bottom': '1px solid #fff'
+	});
+	plugins.navResponsiveAlink.css({
+		'color': '#fff',
+		'padding': '7px 15px'
+	});
 }

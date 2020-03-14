@@ -29,5 +29,13 @@
     "jquery": "^3.4.1",
     "lodash": "^4.17.15",
     "popper.js": "^1.14.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khanvuthy88/aml-global.git"
+  },
+  "bugs": {
+    "url": "https://github.com/khanvuthy88/aml-global/issues"
+  },
+  "homepage": "https://github.com/khanvuthy88/aml-global#readme"
 }

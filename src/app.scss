@@ -24,8 +24,26 @@
     font-style: normal;
 }
 
+
+
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+body{
+    background-color:#fff;
+}
+.mobile{
+    a{
+        &.nav-link{
+            color: #fff !important;
+        }
+    }
+}
+article{
+    &.page{
+        margin-bottom: 30px;
+    }
+}
 #mini-head{
     background-color: $aml-primary-color;
     color: #fff;
@@ -37,8 +55,16 @@
     ul{
         padding:0px;
         margin: 0px;
+        @include media-breakpoint-up(xs){
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+        }
         li{
             display: inline;
+            @include media-breakpoint-up(xs){
+                display:inline-block;
+            }
             @include media-breakpoint-up(md){
                 margin-right: 15px;
             }
@@ -60,10 +86,18 @@
                     font-size: 110%;
                 }
             }
+            &:first-child{
+                @include media-breakpoint-up(xs){
+                    margin-right:15px;
+                }
+            }
         }
     }
     section{
         float: left;
+        @include media-breakpoint-up(xs){
+            width:100%;
+        }
     }
 }
 
@@ -158,5 +192,6 @@ h1{
     &.entry-title{
         color: $aml-primary-color;
         font-family: $font-family-segoe-ui-bold-sans-serif;
+        font-size: 2rem;
     }
 }
