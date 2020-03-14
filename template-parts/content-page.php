@@ -24,6 +24,12 @@
 			    </ul>
 			<?php endif; ?>
 		<?php endif; ?>
+		
+		
+		<?php
+		the_content();
+		?>
+
 		<?php if(is_page('principals-and-partners')): ?>
 			<?php if ( is_active_sidebar( 'sidebar-global-partners' ) ) : ?>
 			    <ul id="sidebar-global-partners">
@@ -31,10 +37,7 @@
 			    </ul>
 			<?php endif; ?>
 		<?php endif; ?>
-		
-		<?php
-		the_content();
-
+		<?php 
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'aml-global' ),
 			'after'  => '</div>',
